@@ -1,0 +1,579 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000080;
+    color: #17233c;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND IF26
+========================= */
+
+.background-text {
+    position: fixed;
+    left: -80px;
+    bottom: 40px;
+
+    font-size: 180px;
+    font-weight: bold;
+
+    color: rgba(30, 100, 200, 0.07);
+
+    transform: rotate(-25deg);
+
+    z-index: -1;
+
+    user-select: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-bottom: 1px solid #dce8f8;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1769d1;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #53627a;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #1769d1;
+}
+
+
+/* =========================
+   HERO BERANDA
+========================= */
+
+.hero {
+    min-height: calc(100vh - 125px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: white;
+}
+
+.hero-content > p:not(.small-title) {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 550px;
+
+    margin-bottom: 30px;
+}
+
+.gambar-kelompok {
+
+    text-align: center;
+
+    margin: 100px;
+
+    margin-right: 15;
+
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #1769d1;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #0e4fa8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HALAMAN
+========================= */
+
+.page {
+    min-height: calc(100vh - 125px);
+
+    padding: 70px 8%;
+}
+
+.page-header {
+    margin-bottom: 45px;
+}
+
+.page-header p {
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    color: #ffffff;
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.page-header span {
+    color: white;
+}
+
+
+/* =========================
+   ANGGOTA
+========================= */
+
+.member-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.member-card {
+    position: relative;
+
+    background: #FFFFFF;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e0eafa;
+
+    box-shadow: 0 8px 25px rgba(40, 90, 150, 0.07);
+
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8ab8ee;
+}
+
+.number {
+    color: #1769d1;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.member-card h2 {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.member-card p {
+    color: #000000;
+}
+
+
+/* =========================
+   MATERI
+========================= */
+
+.materi-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.materi-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e0eafa;
+
+    box-shadow: 0 8px 25px rgba(40, 90, 150, 0.07);
+
+    transition: 0.3s;
+}
+
+.materi-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8ab8ee;
+}
+
+.materi-number {
+    color: #1769d1;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.materi-card h2 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.materi-card p {
+    color: #718096;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.materi-card button {
+
+    border: none;
+
+    background: #e8f2ff;
+
+    color: #1769d1;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.materi-card button:hover {
+    background: #1769d1;
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8a98ad;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .page {
+        padding: 50px 7%;
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .background-text {
+        font-size: 100px;
+    }
+}
+
+
+/* =========================
+   HALAMAN ISI MATERI 1
+========================= */
+
+.materi-detail {
+    min-height: calc(100vh - 125px);
+
+    padding: 60px 10%;
+}
+
+
+/* Tombol kembali */
+
+.kembali {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #1769d1;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.kembali:hover {
+    text-decoration: underline;
+}
+
+
+/* Kotak materi */
+
+.materi-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e0eafa;
+
+    box-shadow:
+        0 8px 25px
+        rgba(40, 90, 150, 0.07);
+}
+
+
+/* Label */
+
+.materi-label {
+    color: #1769d1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Judul */
+
+.materi-box h1 {
+    font-size: 40px;
+
+    color: #17233c;
+
+    margin-bottom: 15px;
+}
+
+
+/* Deskripsi */
+
+.materi-box .deskripsi {
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Garis */
+
+.materi-box hr {
+    border: none;
+
+    border-top: 1px solid #e0eafa;
+
+    margin: 35px 0;
+}
+
+
+/* Subjudul */
+
+.materi-box h2 {
+    color: #1769d1;
+
+    font-size: 23px;
+
+    margin-top: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Paragraf */
+
+.materi-box p {
+    color: #53627a;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* List */
+
+.materi-box ul,
+.materi-box ol {
+    margin-left: 25px;
+
+    color: #53627a;
+
+    line-height: 2;
+}
+
+
+/* Code */
+
+.materi-box pre {
+    background: #10233f;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    margin-top: 15px;
+}
+
+
+.materi-box code {
+    font-family: Consolas, monospace;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+
+    .materi-detail {
+        padding: 40px 6%;
+    }
+
+    .materi-box {
+        padding: 25px;
+    }
+
+    .materi-box h1 {
+        font-size: 30px;
+    }
+
+    .materi-box h2 {
+        font-size: 20px;
+    }
+
+}
