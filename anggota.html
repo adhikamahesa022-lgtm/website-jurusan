@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF26 - Anggota</title>
+    <title>IF26 - Anggota Kelompok</title>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="background-text">IF26</div>
-
     <!-- Navigasi -->
     <nav>
-        <div class="logo">IF26</div>
+        <div class="logo">
+            <span class="brand-title">Kelompok 13</span>
+            <span class="brand-sub">Informatika 2026</span>
+        </div>
 
         <div class="menu">
             <a href="index.html">Beranda</a>
@@ -22,91 +29,148 @@
         </div>
     </nav>
 
-    <!-- Halaman Anggota baris 1 -->
+    <!-- Halaman Utama Anggota -->
     <main class="page">
 
         <div class="page-header">
-            <p>INFORMATIKA 2026</p>
-            <h1>Anggota IF26</h1>
-            <span>Daftar mahasiswa kelas IF26</span>
+            <p class="small-title">INFORMATIKA 2026</p>
+            <h1>Anggota Kelompok 13</h1>
+            <p class="subtitle">Daftar mahasiswa dan rekan seperjuangan kelas IF26</p>
         </div>
 
         <div class="member-container">
 
-            <div class="member-card">
-                <div class="number">01</div>
-                <h2>Fahriz Adriansyah</h2>
-                <p>267006111197</p>
-                <p>Ketua Kelompok 13</p>
-                <img src="gambar/fahrizz.jpeg" width="240px">
+            <!-- Member 1 (Ketua) -->
+            <div class="member-card leader">
+                <div class="card-image">
+                    <img src="src/fahrizz.jpeg" alt="Fahriz Adriansyah">
+                    <span class="member-number">#01</span>
+                </div>
+                <div class="card-info">
+                    <span class="role-badge">Ketua Kelompok</span>
+                    <h2>Fahriz Adriansyah</h2>
+                    <p class="npm">NPM: 267006111197</p>
+                </div>
             </div>
 
+            <!-- Member 2 -->
             <div class="member-card">
-                <div class="number">02</div>
-                <h2>Ajrina Nurzihan M</h2>
-                <p>267006111098</p>
-                <img src="gambar/ajrinaa.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/ajrinaa.jpeg" alt="Ajrina Nurzihan M">
+                    <span class="member-number">#02</span>
+                </div>
+                <div class="card-info">
+                    <h2>Ajrina Nurzihan M</h2>
+                    <p class="npm">NPM: 267006111098</p>
+                </div>
             </div>
 
+            <!-- Member 3 -->
             <div class="member-card">
-                <div class="number">03</div>
-                <h2>Enara Barts Zain</h2>
-                <p>267006111192</p>
-                <img src="gambar/enara.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/enara.jpeg" alt="Enara Barts Zain">
+                    <span class="member-number">#03</span>
+                </div>
+                <div class="card-info">
+                    <h2>Enara Barts Zain</h2>
+                    <p class="npm">NPM: 267006111192</p>
+                </div>
             </div>
 
+            <!-- Member 4 -->
             <div class="member-card">
-                <div class="number">04</div>
-                <h2>Gian Aswangga Topu</h2>
-                <p>267006111198</p>
-                <img src="gambar/gian.jpeg" width="240px">
-            </div>
-            <div class="member-card">
-                <div class="number">05</div>
-                <h2>Hisyam Al Ghifari</h2>
-                <p>267006111195</p>
-                <img src="gambar/hisyam.jpeg" width="240px">
-            </div>
-
-            <div class="member-card">
-                <div class="number">06</div>
-                <h2>Indra Ardiyansyah</h2>
-                <p>267006111191</p>
-                <img src="gambar/indra.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/gian.jpeg" alt="Gian Aswangga Topu">
+                    <span class="member-number">#04</span>
+                </div>
+                <div class="card-info">
+                    <h2>Gian Aswangga Topu</h2>
+                    <p class="npm">NPM: 267006111198</p>
+                </div>
             </div>
 
+            <!-- Member 5 -->
             <div class="member-card">
-                <div class="number">07</div>
-                <h2>Muhammad Adhika Mahesa Putra</h2>
-                <p>267006111053</p>
-                <img src="gambar/adhika.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/hisyam.jpeg" alt="Hisyam Al Ghifari">
+                    <span class="member-number">#05</span>
+                </div>
+                <div class="card-info">
+                    <h2>Hisyam Al Ghifari</h2>
+                    <p class="npm">NPM: 267006111195</p>
+                </div>
             </div>
 
+            <!-- Member 6 -->
             <div class="member-card">
-                <div class="number">08</div>
-                <h2>Muhammad Rafly Awalludin</h2>
-                <p>267006111117</p>
-                <img src="gambar/rafly.jpeg" width="240px">
-            </div>
-            <div class="member-card">
-                <div class="number">09</div>
-                <h2>Adnan Fatwa Alamsyah</h2>
-                <p>267006111028</p>
-                <img src="gambar/adnan.jpeg" width="240px">
-            </div>
-
-            <div class="member-card">
-                <div class="number">10</div>
-                <h2>Peggy Nur Afdila</h2>
-                <p>267006111194</p>
-                <img src="gambar/peggy.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/indra.jpeg" alt="Indra Ardiyansyah">
+                    <span class="member-number">#06</span>
+                </div>
+                <div class="card-info">
+                    <h2>Indra Ardiyansyah</h2>
+                    <p class="npm">NPM: 267006111191</p>
+                </div>
             </div>
 
+            <!-- Member 7 -->
             <div class="member-card">
-                <div class="number">11</div>
-                <h2>Zulfa Ainun Najib</h2>
-                <p>267006111015</p>
-                <img src="gambar/najib.jpeg" width="240px">
+                <div class="card-image">
+                    <img src="src/adhika.jpeg" alt="Muhammad Adhika Mahesa Putra">
+                    <span class="member-number">#07</span>
+                </div>
+                <div class="card-info">
+                    <h2>Muhammad Adhika Mahesa Putra</h2>
+                    <p class="npm">NPM: 267006111053</p>
+                </div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="member-card">
+                <div class="card-image">
+                    <img src="src/rafly.jpeg" alt="Muhammad Rafly Awalludin">
+                    <span class="member-number">#08</span>
+                </div>
+                <div class="card-info">
+                    <h2>Muhammad Rafly Awalludin</h2>
+                    <p class="npm">NPM: 267006111117</p>
+                </div>
+            </div>
+
+            <!-- Member 9 -->
+            <div class="member-card">
+                <div class="card-image">
+                    <img src="src/adnan.jpeg" alt="Adnan Fatwa Alamsyah">
+                    <span class="member-number">#09</span>
+                </div>
+                <div class="card-info">
+                    <h2>Adnan Fatwa Alamsyah</h2>
+                    <p class="npm">NPM: 267006111028</p>
+                </div>
+            </div>
+
+            <!-- Member 10 -->
+            <div class="member-card">
+                <div class="card-image">
+                    <img src="src/peggy.jpeg" alt="Peggy Nur Afdila">
+                    <span class="member-number">#10</span>
+                </div>
+                <div class="card-info">
+                    <h2>Peggy Nur Afdila</h2>
+                    <p class="npm">NPM: 267006111194</p>
+                </div>
+            </div>
+
+            <!-- Member 11 -->
+            <div class="member-card">
+                <div class="card-image">
+                    <img src="src/najib.jpeg" alt="Zulfa Ainun Najib">
+                    <span class="member-number">#11</span>
+                </div>
+                <div class="card-info">
+                    <h2>Zulfa Ainun Najib</h2>
+                    <p class="npm">NPM: 267006111015</p>
+                </div>
             </div>
 
         </div>
