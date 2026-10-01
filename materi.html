@@ -3,61 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF26 - Materi</title>
+    <title>IF26 - Kumpulan Materi</title>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="background-text">IF26</div>
-
     <!-- Navigasi -->
     <nav>
-        <div class="logo">IF26</div>
+        <div class="logo">
+            <span class="brand-title">Kelompok 13</span>
+            <span class="brand-sub">Informatika 2026</span>
+        </div>
 
         <div class="menu">
             <a href="index.html">Beranda</a>
             <a href="anggota.html">Anggota</a>
-            <a href="materi.html" class="active">materi</a>
+            <a href="materi.html" class="active">Materi</a>
         </div>
     </nav>
 
-    <!-- Halaman Materi -->
+    <!-- Halaman Utama Materi -->
     <main class="page">
 
         <div class="page-header">
-            <p>INFORMATIKA 26</p>
-            <h1>Materi PPKM</h1>
-            <span>Kumpulan materi PPKM IF26</span>
+            <p class="small-title">INFORMATIKA 2026</p>
+            <h1>Materi Perkulihan & PPKM</h1>
+            <p class="subtitle">Kumpulan modul pembelajaran dan arsip materi kelas IF26</p>
         </div>
 
         <div class="materi-container">
 
+            <!-- Card Materi 1 -->
             <div class="materi-card">
-                <span class="materi-number">01</span>
-                <h2>Hukum sebagai pelindung & landasan inovasi</h2>
+                <div class="materi-header">
+                    <span class="materi-number">01</span>
+                    <span class="materi-tag">Hukum & Etika</span>
+                </div>
+                <h2>Hukum sebagai Pelindung & Landasan Inovasi</h2>
                 <p>
-                    Materi hukum-hukum tentang teknologi
+                    Pembahasan mengenai regulasi, undang-undang teknologi, serta landasan hukum dalam berinovasi di bidang Informatika.
                 </p>
-                 <button><a href="materi1.html"class="materi-number">Lihat Materi</a></button>
+                <a href="materi1.html" class="btn-materi">
+                    Lihat Materi <span>→</span>
+                </a>
             </div>
 
+            <!-- Card Materi 2 -->
             <div class="materi-card">
-                <span class="materi-number">02</span>
-                <h2>Sejarah Informatika</h2>
+                <div class="materi-header">
+                    <span class="materi-number">02</span>
+                    <span class="materi-tag">Sejarah</span>
+                </div>
+                <h2>Sejarah Informatika & HIMATIF</h2>
                 <p>
-                    Materi mengenai Sejarah berdirinya IF UNSIL,terbentuknya HIMATIF,sejarah Informatika & HIMATIF
+                    Mengenal jejak sejarah berdirinya Informatika UNSIL, pembentukan organisasi HIMATIF, serta perkembangannya.
                 </p>
-            <a href="materi2.html"class="materi-number"><button>Lihat Materi</a></button>
+                <a href="materi2.html" class="btn-materi">
+                    Lihat Materi <span>→</span>
+                </a>
             </div>
 
+            <!-- Card Materi 3 -->
             <div class="materi-card">
-                <span class="materi-number">03</span>
+                <div class="materi-header">
+                    <span class="materi-number">03</span>
+                    <span class="materi-tag">Identitas</span>
+                </div>
                 <h2>Dharma Satya Jayamahe</h2>
                 <p>
-                    Materi mengenai Arti semboyan Informatika
+                    Memahami makna mendalam dari semboyan kebanggaan Informatika serta nilai-nilai dasar yang diusungnya.
                 </p>
-               <button><a href="materi3.html"class="materi-number">Lihat Materi</a></button>
+                <a href="materi3.html" class="btn-materi">
+                    Lihat Materi <span>→</span>
+                </a>
             </div>
 
         </div>
