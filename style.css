@@ -6,17 +6,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Mengubah font global ke Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Mengubah font global ke Poppins */
 }
+
 html {
-    background-color: #020617; /* Sama dengan warna gelap teratas gradasi */
+    background-color: #020617;
+    scroll-behavior: smooth;
+    /* Sama dengan warna gelap teratas gradasi */
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #020617 0%, #000080 55%, #0f2b5c 100%);
+    background: radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.2), transparent 28%), radial-gradient(circle at 86% 78%, rgba(14, 165, 233, 0.12), transparent 25%), linear-gradient(135deg, #020617 0%, #000080 55%, #0f2b5c 100%);
     background-attachment: fixed;
     color: #ffffff;
     min-height: 100vh;
@@ -27,6 +31,7 @@ body {
     justify-content: space-between;
 }
 
+
 /* =========================
    NAVBAR (SAMA SEPERTI LAMA)
 ========================= */
@@ -34,19 +39,17 @@ body {
 nav {
     width: 100%;
     height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 8%;
-
     background: rgba(255, 255, 255, 0.95);
-
     border-bottom: 1px solid #dce8f8;
     position: relative;
     z-index: 10;
+    animation: nav-drop 0.65s ease both;
 }
+
 
 /* =========================
    STYLE LOGO NAVBAR DUA BARIS
@@ -54,7 +57,8 @@ nav {
 
 .logo {
     display: flex;
-    flex-direction: column; /* Menyusun teks ke bawah */
+    flex-direction: column;
+    /* Menyusun teks ke bawah */
     justify-content: center;
     line-height: 1.2;
 }
@@ -62,14 +66,16 @@ nav {
 .brand-title {
     font-size: 20px;
     font-weight: 700;
-    color: #1769d1; /* Warna biru utama navbar */
+    color: #1769d1;
+    /* Warna biru utama navbar */
     letter-spacing: -0.3px;
 }
 
 .brand-sub {
     font-size: 11px;
     font-weight: 600;
-    color: #64748b; /* Warna abu-abu halus untuk sub-teks */
+    color: #64748b;
+    /* Warna abu-abu halus untuk sub-teks */
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -84,7 +90,6 @@ nav {
     color: #53627a;
     font-size: 15px;
     font-weight: 600;
-
     transition: 0.3s;
 }
 
@@ -101,7 +106,8 @@ nav {
 .hero {
     min-height: calc(100vh - 135px);
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Teks Kiri, Foto Kanan */
+    grid-template-columns: 1fr 1fr;
+    /* Teks Kiri, Foto Kanan */
     gap: 40px;
     align-items: center;
     padding: 40px 8%;
@@ -114,6 +120,12 @@ nav {
     max-width: 550px;
 }
 
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 1;
+}
+
 .small-title {
     color: #60a5fa;
     font-size: 13px;
@@ -124,9 +136,11 @@ nav {
 }
 
 .hero h1 {
-    font-size: 42px; /* Diatur ke 42px agar teks muat dalam 2 baris rapi */
+    font-size: 42px;
+    /* Diatur ke 42px agar teks muat dalam 2 baris rapi */
     font-weight: 700;
-    line-height: 1.25; /* Jarak antar baris lebih bernapas */
+    line-height: 1.25;
+    /* Jarak antar baris lebih bernapas */
     color: #ffffff;
     margin-bottom: 18px;
 }
@@ -136,14 +150,16 @@ nav {
     display: inline-block;
 }
 
-.hero-content > p:not(.small-title) {
+.hero-content>p:not(.small-title) {
     color: #cbd5e1;
     font-size: 15px;
     line-height: 1.7;
     max-width: 480px;
     margin-bottom: 30px;
-    text-align: justify; /* Membuat teks rata kanan-kiri */
+    text-align: justify;
+    /* Membuat teks rata kanan-kiri */
 }
+
 
 /* =========================
    ANIMASI TOMBOL MENAWAN
@@ -159,7 +175,6 @@ nav {
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 0.5px;
-    
     /* Efek Transisi Halus */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(23, 105, 209, 0.35);
@@ -167,14 +182,18 @@ nav {
     cursor: pointer;
 }
 
+
 /* Efek saat Kursor Ditempelkan (Hover) */
+
 .button:hover {
     background: linear-gradient(135deg, #1d78f5, #135ac0);
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 10px 25px rgba(23, 105, 209, 0.55);
 }
 
+
 /* Efek saat Tombol Ditekan/Diklik (Active) */
+
 .button:active {
     transform: translateY(1px) scale(0.97);
     box-shadow: 0 2px 8px rgba(23, 105, 209, 0.4);
@@ -192,7 +211,9 @@ nav {
     position: relative;
 }
 
+
 /* Efek Pendaran Cahaya (Aura Glow) di Belakang Foto */
+
 .hero-image::before {
     content: '';
     position: absolute;
@@ -210,7 +231,8 @@ nav {
     width: 100%;
     max-width: 550px;
     padding: 8px;
-    background: rgba(255, 255, 255, 0.05); /* Bingkai kaca gelap transparan */
+    background: rgba(255, 255, 255, 0.05);
+    /* Bingkai kaca gelap transparan */
     backdrop-filter: blur(12px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -219,7 +241,9 @@ nav {
     overflow: hidden;
 }
 
+
 /* Badge Label Melayang di Atas Foto */
+
 .badge-foto {
     position: absolute;
     top: 20px;
@@ -245,7 +269,9 @@ nav {
     transition: transform 0.5s ease;
 }
 
+
 /* Efek Hover Interaktif */
+
 .card-gambar:hover {
     transform: translateY(-8px) scale(1.01);
     border-color: rgba(96, 165, 250, 0.4);
@@ -254,6 +280,15 @@ nav {
 
 .card-gambar:hover img {
     transform: scale(1.03);
+}
+
+.card-gambar::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(147, 197, 253, 0.16);
+    border-radius: 18px;
+    pointer-events: none;
 }
 
 
@@ -266,20 +301,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     /* Background Kaca Transparan (Glassmorphism) */
     background: rgba(2, 6, 23, 0.65);
     backdrop-filter: blur(10px);
-    
     /* Garis Pembatas Halus di Atas Footer */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    
     /* Gaya Teks */
     color: #94a3b8;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    
     margin-top: auto;
 }
 
@@ -287,32 +318,42 @@ footer p {
     transition: color 0.3s ease;
 }
 
+
 /* Efek Cahaya Biru Saat Kursor Diarahkan ke Teks Footer */
+
 footer p:hover {
     color: #60a5fa;
 }
+
 
 /* =========================
    SCROLLBAR KHUSUS AREA TENGAH
 ========================= */
 
+
 /* Lebar Scrollbar */
+
 ::-webkit-scrollbar {
-    width: 6px; /* Ukuran super tipis & ramping */
+    width: 6px;
+    /* Ukuran super tipis & ramping */
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Transparan murni tanpa celah putih */
+    background: transparent;
+    /* Transparan murni tanpa celah putih */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.25); /* Kapsul putih halus transparan */
+    background: rgba(255, 255, 255, 0.25);
+    /* Kapsul putih halus transparan */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #60a5fa; /* Berubah menjadi biru terang saat kursor menempel */
+    background: #60a5fa;
+    /* Berubah menjadi biru terang saat kursor menempel */
 }
+
 
 /* =========================
    STYLE HALAMAN ANGGOTA
@@ -321,13 +362,14 @@ footer p:hover {
 .page {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 50px 8% 80px 8%;
+    padding: 58px 6% 88px;
     width: 100%;
 }
 
 .page-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
+    animation: page-reveal 0.7s ease both;
 }
 
 .page-header h1 {
@@ -342,7 +384,60 @@ footer p:hover {
     font-size: 15px;
 }
 
+.member-section {
+    margin-top: 48px;
+    animation: section-reveal 0.75s ease both;
+}
+
+.section-heading {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.section-heading .small-title {
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+}
+
+.section-heading .subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.kakak-asuh-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 330px));
+    gap: 28px;
+    justify-content: center;
+}
+
+.kakak-asuh-container .card-image {
+    height: 280px;
+}
+
+.kakak-asuh-container .member-card {
+    animation: card-reveal 0.7s 0.15s ease both;
+}
+
+.kakak-asuh-container .member-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.anggota-section {
+    margin-top: 78px;
+    animation-delay: 0.15s;
+}
+
+
 /* Container Grid Kartu Anggota */
+
 .member-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -350,34 +445,46 @@ footer p:hover {
     justify-content: center;
 }
 
+
 /* Desain Kartu Kaca (Glassmorphism) */
+
 .member-card {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 16px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    animation: card-reveal 0.7s 0.3s ease both;
 }
 
+
 /* Efek Hover Kartu */
+
 .member-card:hover {
     transform: translateY(-8px);
     border-color: rgba(96, 165, 250, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(23, 105, 209, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35), 0 0 24px rgba(23, 105, 209, 0.2);
 }
 
+
 /* Kartu Khusus Ketua */
+
 .member-card.leader {
     border-color: rgba(96, 165, 250, 0.3);
     background: linear-gradient(180deg, rgba(23, 105, 209, 0.15) 0%, rgba(255, 255, 255, 0.04) 100%);
 }
 
+
 /* Bingkai Foto Anggota */
+
 .card-image {
     position: relative;
     width: 100%;
@@ -390,15 +497,27 @@ footer p:hover {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Foto pas otomatis tanpa gepeng */
+    object-fit: cover;
+    /* Foto pas otomatis tanpa gepeng */
     transition: transform 0.4s ease;
 }
 
-.member-card:hover .card-image img {
-    transform: scale(1.05); /* Zoom halus pada foto saat di-hover */
+.card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.02), rgba(2, 6, 23, 0.2));
+    pointer-events: none;
 }
 
+.member-card:hover .card-image img {
+    transform: scale(1.05);
+    /* Zoom halus pada foto saat di-hover */
+}
+
+
 /* Badge Nomor Urut (#01, #02) */
+
 .member-number {
     position: absolute;
     top: 12px;
@@ -413,7 +532,9 @@ footer p:hover {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+
 /* Info Detail Anggota */
+
 .card-info {
     width: 100%;
 }
@@ -438,11 +559,112 @@ footer p:hover {
     line-height: 1.3;
 }
 
+.member-container .member-card:nth-child(2) {
+    animation-delay: 0.38s;
+}
+
+.member-container .member-card:nth-child(3) {
+    animation-delay: 0.46s;
+}
+
+.member-container .member-card:nth-child(4) {
+    animation-delay: 0.54s;
+}
+
+.member-container .member-card:nth-child(5) {
+    animation-delay: 0.62s;
+}
+
+@keyframes nav-drop {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes page-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes section-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes card-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes article-rise {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.js .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 .card-info .npm {
     font-size: 13px;
     color: #94a3b8;
     font-weight: 500;
 }
+
+
 /* =========================
    STYLE HALAMAN MATERI
 ========================= */
@@ -454,9 +676,12 @@ footer p:hover {
     justify-content: center;
 }
 
+
 /* Card Kaca Glassmorphism */
+
 .materi-card {
-    background: rgba(255, 255, 255, 0.04);
+    min-height: 320px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -464,16 +689,42 @@ footer p:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.35s ease;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
 }
 
+.materi-card::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -70px;
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.18);
+    filter: blur(8px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+
+
 /* Efek Hover Card Materi */
+
 .materi-card:hover {
     transform: translateY(-8px);
     border-color: rgba(96, 165, 250, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(23, 105, 209, 0.2);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.38), 0 0 25px rgba(23, 105, 209, 0.2);
+}
+
+.js .materi-card.reveal-on-scroll.is-visible:hover {
+    transform: translateY(-8px);
+}
+
+.materi-card:hover::before {
+    transform: scale(1.45);
+    opacity: 0.8;
 }
 
 .materi-header {
@@ -483,7 +734,9 @@ footer p:hover {
     margin-bottom: 20px;
 }
 
+
 /* Angka Modul (01, 02, 03) */
+
 .materi-number {
     font-size: 28px;
     font-weight: 800;
@@ -520,7 +773,9 @@ footer p:hover {
     text-align: justify;
 }
 
+
 /* Tombol Akses Materi */
+
 .btn-materi {
     display: inline-flex;
     align-items: center;
@@ -552,6 +807,7 @@ footer p:hover {
     transform: translateX(4px);
 }
 
+
 /* =========================
    STYLE DETAIL HALAMAN MATERI
 ========================= */
@@ -561,9 +817,12 @@ footer p:hover {
     margin: 0 auto;
     padding: 40px 24px 80px 24px;
     width: 100%;
+    animation: page-reveal 0.75s ease both;
 }
 
+
 /* Tombol Kembali Sleek & Glassmorphic */
+
 .btn-kembali {
     display: inline-flex;
     align-items: center;
@@ -588,14 +847,17 @@ footer p:hover {
     transform: translateX(-4px);
 }
 
+
 /* Kartu Wadah Artikel */
+
 .materi-box {
-    background: rgba(255, 255, 255, 0.04);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 40px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+    animation: article-rise 0.85s 0.12s ease both;
 }
 
 .materi-label {
@@ -634,6 +896,19 @@ footer p:hover {
     font-weight: 600;
     color: #60a5fa;
     margin: 32px 0 14px 0;
+    position: relative;
+    padding-left: 14px;
+}
+
+.materi-box h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 3px;
+    height: calc(100% - 8px);
+    border-radius: 3px;
+    background: #38bdf8;
 }
 
 .materi-box p {
@@ -644,7 +919,9 @@ footer p:hover {
     text-align: justify;
 }
 
+
 /* Style List/Daftar Point */
+
 .materi-list {
     margin: 16px 0 24px 20px;
     color: #cbd5e1;
@@ -661,7 +938,9 @@ footer p:hover {
     color: #ffffff;
 }
 
+
 /* Style Blok Kode C++ IDE Dark Theme */
+
 .code-wrapper {
     margin: 24px 0;
     border-radius: 14px;
@@ -695,21 +974,24 @@ code {
     line-height: 1.6;
 }
 
+
 /* Responsif Mobile */
+
 @media (max-width: 600px) {
     .materi-box {
         padding: 24px 18px;
     }
-
     .materi-box h1 {
         font-size: 24px;
     }
-
     .materi-box h2 {
         font-size: 18px;
     }
 }
+
+
 /* Responsive pada Tablet/HP */
+
 @media (max-width: 600px) {
     .materi-container {
         grid-template-columns: 1fr;
@@ -718,40 +1000,51 @@ code {
 
 
 /* Penyesuaian HP & Tablet */
+
 @media (max-width: 600px) {
     .page-header h1 {
         font-size: 28px;
     }
-
     .member-container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 20px;
     }
-
+    .kakak-asuh-container {
+        grid-template-columns: 1fr;
+    }
+    .member-section {
+        margin-top: 42px;
+    }
+    .anggota-section {
+        margin-top: 54px;
+    }
+    .section-heading h2 {
+        font-size: 24px;
+    }
     .card-image {
         height: 220px;
     }
 }
+
+
 /* =========================
    RESPONSIVE HP & TABLET
 ========================= */
 
 @media (max-width: 900px) {
     .hero {
-        grid-template-columns: 1fr; /* Tumpuk vertikal saat dibuka di HP */
+        grid-template-columns: 1fr;
+        /* Tumpuk vertikal saat dibuka di HP */
         text-align: center;
         gap: 30px;
         padding: 40px 6%;
     }
-
     .hero-content {
         max-width: 100%;
     }
-
     .hero h1 {
         font-size: 40px;
     }
-
     .card-gambar {
         max-width: 100%;
     }
@@ -761,15 +1054,12 @@ code {
     nav {
         padding: 0 5%;
     }
-
     .menu {
         gap: 15px;
     }
-
     .menu a {
         font-size: 13px;
     }
-
     .hero h1 {
         font-size: 34px;
     }
